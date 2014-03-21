@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeWindow", "MazeWindow.csproj", "{269D0337-76B4-430E-84ED-39173A3D744B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GraphicScliptBlock", "GraphicScliptBlock\GraphicScliptBlock.csproj", "{D62791D1-1297-4C78-8EE1-D7BC8517EC8B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapPaint", "BitmapPaint\BitmapPaint.csproj", "{3D1040DA-51BF-4986-B0A6-AD5E58261862}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 4
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://tfs.codeplex.com/tfs/tfs27
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BitmapPaint\\BitmapPaint.csproj
+		SccProjectName1 = BitmapPaint
+		SccLocalPath1 = BitmapPaint
+		SccProjectUniqueName2 = GraphicScliptBlock\\GraphicScliptBlock.csproj
+		SccProjectName2 = GraphicScliptBlock
+		SccLocalPath2 = GraphicScliptBlock
+		SccProjectUniqueName3 = MazeWindow.csproj
+		SccLocalPath3 = .
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{269D0337-76B4-430E-84ED-39173A3D744B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{269D0337-76B4-430E-84ED-39173A3D744B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{269D0337-76B4-430E-84ED-39173A3D744B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{269D0337-76B4-430E-84ED-39173A3D744B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D62791D1-1297-4C78-8EE1-D7BC8517EC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D62791D1-1297-4C78-8EE1-D7BC8517EC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D62791D1-1297-4C78-8EE1-D7BC8517EC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D62791D1-1297-4C78-8EE1-D7BC8517EC8B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,22 @@
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\bin\Debug\HelloMaze.exe.config
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\obj\Debug\MazeWindow.csprojResolveAssemblyReference.cache
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\obj\Debug\HelloMaze.BoardData.resources
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\obj\Debug\HelloMaze.Properties.Resources.resources
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\obj\Debug\MazeWindow.csproj.GenerateResource.Cache
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\bin\Debug\HelloMaze.exe
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\bin\Debug\HelloMaze.pdb
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\bin\Debug\ClassLibrary1.dll
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\bin\Debug\ClassLibrary1.pdb
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\obj\Debug\HelloMaze.exe
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\obj\Debug\HelloMaze.pdb
+C:\Users\豪雄\Desktop\HelloMaze\bin\Debug\HelloMaze.exe.config
+C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\HelloMaze.exe
+C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\HelloMaze.pdb
+C:\Users\豪雄\Desktop\HelloMaze\bin\Debug\HelloMaze.exe
+C:\Users\豪雄\Desktop\HelloMaze\bin\Debug\HelloMaze.pdb
+C:\Users\豪雄\Desktop\HelloMaze\bin\Debug\ClassLibrary1.dll
+C:\Users\豪雄\Desktop\HelloMaze\bin\Debug\ClassLibrary1.pdb
+C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\MazeWindow.csprojResolveAssemblyReference.cache
+C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\HelloMaze.BoardData.resources
+C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\HelloMaze.Properties.Resources.resources
+C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\MazeWindow.csproj.GenerateResource.Cache

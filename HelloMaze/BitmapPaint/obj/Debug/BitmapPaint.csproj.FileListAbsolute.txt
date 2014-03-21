@@ -1,0 +1,12 @@
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\ClassLibrary1\bin\Debug\ClassLibrary1.dll
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\ClassLibrary1\bin\Debug\ClassLibrary1.pdb
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\ClassLibrary1\obj\Debug\BitmapPaint.csprojResolveAssemblyReference.cache
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\ClassLibrary1\obj\Debug\ClassLibrary1.dll
+C:\Users\豪雄\Documents\Visual Studio 2012\Projects\HelloMaze\ClassLibrary1\obj\Debug\ClassLibrary1.pdb
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\bin\Debug\ClassLibrary1.dll
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\bin\Debug\ClassLibrary1.pdb
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.csprojResolveAssemblyReference.cache
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\ClassLibrary1.dll
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\ClassLibrary1.pdb
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.Properties.Resources.resources
+C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.csproj.GenerateResource.Cache
