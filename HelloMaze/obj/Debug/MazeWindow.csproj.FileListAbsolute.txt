@@ -20,3 +20,14 @@ C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\MazeWindow.csprojResolveAssemblyRefe
 C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\HelloMaze.BoardData.resources
 C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\HelloMaze.Properties.Resources.resources
 C:\Users\豪雄\Desktop\HelloMaze\obj\Debug\MazeWindow.csproj.GenerateResource.Cache
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\bin\Debug\HelloMaze.exe.config
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\obj\Debug\HelloMaze.exe
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\obj\Debug\HelloMaze.pdb
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\bin\Debug\HelloMaze.exe
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\bin\Debug\HelloMaze.pdb
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\bin\Debug\ClassLibrary1.dll
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\bin\Debug\ClassLibrary1.pdb
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\obj\Debug\MazeWindow.csprojResolveAssemblyReference.cache
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\obj\Debug\HelloMaze.BoardData.resources
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\obj\Debug\HelloMaze.Properties.Resources.resources
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\obj\Debug\MazeWindow.csproj.GenerateResource.Cache

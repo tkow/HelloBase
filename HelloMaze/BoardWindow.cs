@@ -26,12 +26,12 @@ namespace HelloMaze
      private int BoardSizeHeight;
      private int gridsizewidth ;
      private int gridsizeheight ;
-     private bool[,] CanPutObjectOnBoard;
-     BoardObject controlobj;
+     public bool[,] CanPutObjectOnBoard;
+     public BoardObject controlobj;
      private List<BoardObject> _ListObjectBoard=new List<BoardObject>(); 
-     BitmapPaintClass bmppaint = new BitmapPaintClass(squarelength);
+     public BitmapPaintClass bmppaint = new BitmapPaintClass(squarelength);
      Bitmap back;
-     Bitmap fore;
+     public Bitmap fore;
      Point sp;    //イベント発生時に保持されるマウスの画面座標
 
      public int BoardPositionXmax {
@@ -231,7 +231,7 @@ namespace HelloMaze
         }
 
 
-        private void MoveOperation(BoardObject obj,int directionselect,int repititionnum)  //ブロックスクリプト用移動命令
+        public void MoveOperation(BoardObject obj,int directionselect,int repititionnum)  //ブロックスクリプト用移動命令
      {
 
             CanPutObjectOnBoard[controlobj.ObjectPositionX, controlobj.ObjectPositionY] = true;
@@ -246,6 +246,17 @@ namespace HelloMaze
         }
             bmppaint = new BitmapPaintClass(squarelength);
             bmppaint.ObjectSetPaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, ref CanPutObjectOnBoard, obj.ObjectSelectNum);
+        }
+
+        /// <summary>
+        /// 統一的に使える画面更新のメソッドを作る必要がある
+        /// </summary>
+        /// <param name="obj"></param>
+        public void refreshObject(BoardObject obj)
+        {
+            bmppaint = new BitmapPaintClass(squarelength);
+            bmppaint.ObjectMovePaint(controlobj.ObjectPositionX, controlobj.ObjectPositionY, fore, controlobj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, 1);
+            pictureBox1.Refresh();
         }
 
 

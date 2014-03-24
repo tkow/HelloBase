@@ -10,3 +10,9 @@ C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\ClassLibrary1.dll
 C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\ClassLibrary1.pdb
 C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.Properties.Resources.resources
 C:\Users\豪雄\Desktop\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.csproj.GenerateResource.Cache
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\BitmapPaint\bin\Debug\ClassLibrary1.dll
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\BitmapPaint\bin\Debug\ClassLibrary1.pdb
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.Properties.Resources.resources
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\BitmapPaint\obj\Debug\BitmapPaint.csproj.GenerateResource.Cache
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\BitmapPaint\obj\Debug\ClassLibrary1.dll
+C:\Users\OTAGURO Ken\Source\Repos\HelloBase\HelloMaze\BitmapPaint\obj\Debug\ClassLibrary1.pdb
