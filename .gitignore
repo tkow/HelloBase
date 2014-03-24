@@ -5,3 +5,15 @@ Plock/obj/x86/Debug/Plock.csproj.FileListAbsolute.txt
 Plock/obj/x86/Debug/TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs
 Plock/obj/x86/Debug/TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs
 Plock/obj/x86/Debug/TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs
+*.dll
+*.pdb
+*.txt
+*.Cache
+HelloMaze/obj/Debug/HelloMaze.BoardData.resources
+HelloMaze/obj/Debug/HelloMaze.Properties.Resources.resources
+Plock/obj/x86/Debug/Plock.BoardWindow.resources
+Plock/obj/x86/Debug/Plock.Form1.resources
+Plock/obj/x86/Debug/Plock.Properties.Resources.resources
+Plock.v12.suo
+HelloMaze/bin/Debug/HelloMaze.exe.config
+HelloMaze/BitmapPaint/obj/Debug/BitmapPaint.Properties.Resources.resources
