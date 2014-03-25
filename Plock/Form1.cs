@@ -41,8 +41,8 @@ namespace Plock
             //ゲームのデータクラスの更新
             //gameForm.game = gameController.run(textBox1.Text, gameForm.game);
             gameForm=gameInterpriter.run(textBox1.Text, gameForm);
-            //表示の更新
-            gameForm.refreshObject(gameForm.controlobj);
+            //表示の更新(refreshObjectは未完成のメソッド)
+            //gameForm.refreshObject(gameForm.controlobj);
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -54,8 +54,8 @@ namespace Plock
         {
             //ゲームのデータクラスの更新
             gameForm = gameInterpriter.runOneLine(textBox1.Text, gameForm);
-            //表示の更新
-            gameForm.refreshObject(gameForm.controlobj);
+            ////表示の更新(refreshObjectは未完成のメソッド)
+            //gameForm.refreshObject(gameForm.controlobj);
         }
 
         private void button3_Click(object sender, EventArgs e)

@@ -234,19 +234,61 @@ namespace HelloMaze
         public void MoveOperation(BoardObject obj,int directionselect,int repititionnum)  //ブロックスクリプト用移動命令
      {
 
-            CanPutObjectOnBoard[controlobj.ObjectPositionX, controlobj.ObjectPositionY] = true;
             switch(directionselect){
-                case 1: obj.moveUp(); break;
+                case 1: 
+            for (int i = 0; i < 5; i++)
+                {
+                    bmppaint.ObjectMovePaint(obj.ObjectPositionX,obj.ObjectPositionY,fore,obj.ObjectSelectNum,ref CanPutObjectOnBoard,1,i);
+                    fore.MakeTransparent(Color.White);
+                    pictureBox1.Refresh();
+                    System.Threading.Thread.Sleep(1);
 
-                case 2: obj.moveRight(); break;
+                }
+                obj.moveUp();
+                CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
+                    
+                    break;
 
-                case 3: obj.moveLeft(); break;
+                case 2:
+                    for (int i = 0; i < 5; i++)
+                {
+                    bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, i);
+                    fore.MakeTransparent(Color.White);
+                    pictureBox1.Refresh();
+                    System.Threading.Thread.Sleep(1);
 
-                case 4: obj.moveDown(); break;
+                }
+
+                obj.moveRight();
+                CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
+
+                    break;
+
+                case 3: for (int i = 0; i < 5; i++)
+                    {
+                        bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 3, i);
+                        fore.MakeTransparent(Color.White);
+                        pictureBox1.Refresh();
+                        System.Threading.Thread.Sleep(1);
+
+                    }
+                    obj.moveLeft();
+                    CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
+            
+                    break;
+
+                case 4: for (int i = 0; i < 5; i++)
+                    {
+                        bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 4, i);
+                        fore.MakeTransparent(Color.White);
+                        pictureBox1.Refresh();
+                        System.Threading.Thread.Sleep(1);
+                    }
+                    obj.moveDown();
+                    CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
+                    break;
         }
-            bmppaint = new BitmapPaintClass(squarelength);
-            bmppaint.ObjectSetPaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, ref CanPutObjectOnBoard, obj.ObjectSelectNum);
-        }
+       }
 
         /// <summary>
         /// 統一的に使える画面更新のメソッドを作る必要がある
@@ -254,7 +296,7 @@ namespace HelloMaze
         /// <param name="obj"></param>
         public void refreshObject(BoardObject obj)
         {
-            bmppaint = new BitmapPaintClass(squarelength);
+       
             bmppaint.ObjectMovePaint(controlobj.ObjectPositionX, controlobj.ObjectPositionY, fore, controlobj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, 1);
             pictureBox1.Refresh();
         }
