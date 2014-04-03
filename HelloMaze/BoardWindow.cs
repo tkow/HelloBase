@@ -169,129 +169,160 @@ namespace HelloMaze
                 }
                             }
         }
-     
 
-        private void BoardData_KeyDown(object sender, KeyEventArgs e) //十字キー入力後オブジェクトを移動するメソッド
-     {
-         if (e.KeyCode == Keys.Right && (controlobj.ObjectPositionX<BoardPositionXmax-1&&BoardObjectCanMove[controlobj.ObjectPositionX+1,controlobj.ObjectPositionY]==true))
+
+        public int CountToObject(BoardObject obj, bool[,] CanPutObject,int directionnum){
+            int checkx = obj.ObjectPositionX;
+            int checky = obj.ObjectPositionY;
+
+            switch (directionnum)
             {
-                for (int i = 0; i < 5; i++)
-                {
-                    bmppaint.ObjectMovePaint(controlobj.ObjectPositionX, controlobj.ObjectPositionY, fore, controlobj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, i);
-                    fore.MakeTransparent(Color.White);
-                    pictureBox1.Refresh();
-                    System.Threading.Thread.Sleep(1);
 
-                }
 
-                controlobj.moveRight();
-                CanPutObjectOnBoard[controlobj.ObjectPositionX, controlobj.ObjectPositionY] = false;
+                case 1:
+
+                    while (checkx == BoardPositionXmax - 1)
+                        checkx++;
+                    if (CanPutObject[checkx, checky] == false)
+                    {
+                        break;
+                    }
+                    break;
+
+                case 2:
+
+                    while (checky == BoardPositionYmax - 1)
+                        checky++;
+                    if (CanPutObject[checkx, checky] == false)
+                    {
+                        break;
+                    }
+                    break;
+
+                case 3:
+
+                    while(checkx==0)
+                        checkx --;
+                        if (CanPutObject[checkx, checky] == false)
+                        {
+                            break;
+                        }
+
+                        break;
+                case 4:
+                        while (checky == 0)
+                            checky--;
+                        if (CanPutObject[checkx, checky] == false)
+                        {
+                            break;
+                        }
+                        break;
+
+                    //if (ListObjectBoard.Exists(p => p.ObjectPositionX == checkx && p.ObjectPositionY == checky))
+                    //{
+                          
+                    //}
+                    
+                    
             }
-            if (e.KeyCode == Keys.Left && (0<controlobj.ObjectPositionX&&BoardObjectCanMove[controlobj.ObjectPositionX-1,controlobj.ObjectPositionY]==true))
-            {
-                
-                for (int i = 0; i < 5; i++)
-                {
-                    bmppaint.ObjectMovePaint(controlobj.ObjectPositionX, controlobj.ObjectPositionY, fore, controlobj.ObjectSelectNum, ref CanPutObjectOnBoard, 3, i);
-                    fore.MakeTransparent(Color.White);    
-                    pictureBox1.Refresh();
-                    System.Threading.Thread.Sleep(1);
-
-                }
-                controlobj.moveLeft();
-                CanPutObjectOnBoard[controlobj.ObjectPositionX, controlobj.ObjectPositionY] = false;
-            } 
-            if (e.KeyCode == Keys.Up && (0 < controlobj.ObjectPositionY && BoardObjectCanMove[controlobj.ObjectPositionX, controlobj.ObjectPositionY - 1] == true))
-            {
-                for (int i = 0; i < 5; i++)
-                {
-                    bmppaint.ObjectMovePaint(controlobj.ObjectPositionX,controlobj.ObjectPositionY,fore,controlobj.ObjectSelectNum,ref CanPutObjectOnBoard,1,i);
-                    fore.MakeTransparent(Color.White);
-                    pictureBox1.Refresh();
-                    System.Threading.Thread.Sleep(1);
-
-                }
-                controlobj.moveUp();
-                CanPutObjectOnBoard[controlobj.ObjectPositionX, controlobj.ObjectPositionY] = false;
-            }
-            if (e.KeyCode == Keys.Down && (controlobj.ObjectPositionY < BoardPositionYmax - 1 && BoardObjectCanMove[controlobj.ObjectPositionX, controlobj.ObjectPositionY + 1] == true))
-            {      for (int i = 0; i < 5; i++)
-                {
-                    bmppaint.ObjectMovePaint(controlobj.ObjectPositionX, controlobj.ObjectPositionY, fore, controlobj.ObjectSelectNum, ref CanPutObjectOnBoard, 4, i);
-                    fore.MakeTransparent(Color.White);    
-                    pictureBox1.Refresh();
-                    System.Threading.Thread.Sleep(1);
-                }
-                controlobj.moveDown();
-                CanPutObjectOnBoard[controlobj.ObjectPositionX, controlobj.ObjectPositionY] = false;
-            }
-              
-
-  
+            if(directionnum==1 || directionnum==3)     return checkx;
+            else return checky;
         }
 
+
+        private void BoardData_KeyDown(object sender, KeyEventArgs e) //十字キー入力後オブジェクトを移動するメソッド
+        {
+            if (e.KeyCode == Keys.Right)
+            {
+                MoveOperation(controlobj, 2, 1);
+            }
+            if (e.KeyCode == Keys.Left)
+            {
+
+                MoveOperation(controlobj, 3, 1);
+            }
+            if (e.KeyCode == Keys.Up)
+            {
+                MoveOperation(controlobj, 1, 1);
+            }
+            if (e.KeyCode == Keys.Down)
+            {
+                MoveOperation(controlobj, 4, 1);
+            }
+        }
 
         public void MoveOperation(BoardObject obj,int directionselect,int repititionnum)  //ブロックスクリプト用移動命令
      {
 
             switch(directionselect){
-                case 1: 
-            for (int i = 0; i < 5; i++)
-                {
-                    bmppaint.ObjectMovePaint(obj.ObjectPositionX,obj.ObjectPositionY,fore,obj.ObjectSelectNum,ref CanPutObjectOnBoard,1,i);
-                    fore.MakeTransparent(Color.White);
-                    pictureBox1.Refresh();
-                    System.Threading.Thread.Sleep(1);
+                case 1:
+                    if (0 < controlobj.ObjectPositionY && BoardObjectCanMove[controlobj.ObjectPositionX, controlobj.ObjectPositionY - 1] == true)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 1, i);
+                            fore.MakeTransparent(Color.White);
+                            pictureBox1.Refresh();
+                            System.Threading.Thread.Sleep(1);
 
-                }
-                obj.moveUp();
-                CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
-                    
+                        }
+                        obj.moveUp();
+                        CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
+                    }
                     break;
 
                 case 2:
-                    for (int i = 0; i < 5; i++)
-                {
-                    bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, i);
-                    fore.MakeTransparent(Color.White);
-                    pictureBox1.Refresh();
-                    System.Threading.Thread.Sleep(1);
-
-                }
-
-                obj.moveRight();
-                CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
-
-                    break;
-
-                case 3: for (int i = 0; i < 5; i++)
+                    if (controlobj.ObjectPositionX < BoardPositionXmax - 1 && BoardObjectCanMove[controlobj.ObjectPositionX + 1, controlobj.ObjectPositionY] == true)
                     {
-                        bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 3, i);
-                        fore.MakeTransparent(Color.White);
-                        pictureBox1.Refresh();
-                        System.Threading.Thread.Sleep(1);
+                        for (int i = 0; i < 5; i++)
+                        {
+                            bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, i);
+                            fore.MakeTransparent(Color.White);
+                            pictureBox1.Refresh();
+                            System.Threading.Thread.Sleep(1);
 
+                        }
+
+                        obj.moveRight();
+                        CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
                     }
-                    obj.moveLeft();
-                    CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
-            
                     break;
 
-                case 4: for (int i = 0; i < 5; i++)
+                case 3:
+                    if (0 < controlobj.ObjectPositionX && BoardObjectCanMove[controlobj.ObjectPositionX - 1, controlobj.ObjectPositionY] == true)
                     {
-                        bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 4, i);
-                        fore.MakeTransparent(Color.White);
-                        pictureBox1.Refresh();
-                        System.Threading.Thread.Sleep(1);
+                        for (int i = 0; i < 5; i++)
+                        {
+                            bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 3, i);
+                            fore.MakeTransparent(Color.White);
+                            pictureBox1.Refresh();
+                            System.Threading.Thread.Sleep(1);
+
+                        }
+                        obj.moveLeft();
+                        CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
                     }
-                    obj.moveDown();
-                    CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
                     break;
+
+                case 4:
+                    if (controlobj.ObjectPositionY < BoardPositionYmax - 1 && BoardObjectCanMove[controlobj.ObjectPositionX, controlobj.ObjectPositionY + 1] == true)
+                    {
+                        for (int i = 0; i < 5; i++)
+                        {
+                            bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 4, i);
+                            fore.MakeTransparent(Color.White);
+                            pictureBox1.Refresh();
+                            System.Threading.Thread.Sleep(1);
+                        }
+                        obj.moveDown();
+                        CanPutObjectOnBoard[obj.ObjectPositionX, obj.ObjectPositionY] = false;
+                    }
+                        break;
         }
        }
 
         /// <summary>
-        /// 統一的に使える画面更新のメソッドを作る必要がある
+        /// 統一的に使える画面更新のメソッドを作る必要がある(未完成)
         /// </summary>
         /// <param name="obj"></param>
         public void refreshObject(BoardObject obj)
@@ -301,7 +332,7 @@ namespace HelloMaze
             pictureBox1.Refresh();
         }
 
-
+        
         public void ObjectSet(int x,int y,int ObjectSelectNum)       //ブロックスクリプト用配置命令
         {
             if (controlobj.ObjectPositionX == x && controlobj.ObjectPositionY == y) { return; }
