@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
+using open;
 
 namespace Plock
 {
@@ -15,7 +16,14 @@ namespace Plock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Open zady = new Open();
+            zady.ShowDialog();
+            bool closeFlag = false;
+            while (!closeFlag)
+            {
+                Application.Run(new Form1());
+                closeFlag = zady.cFlag;
+            }
         }
     }
 }

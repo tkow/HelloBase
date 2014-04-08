@@ -104,6 +104,10 @@
       <Project>{269d0337-76b4-430e-84ed-39173a3d744b}</Project>
       <Name>MazeWindow</Name>
     </ProjectReference>
+    <ProjectReference Include="..\open\open.csproj">
+      <Project>{f264178b-f392-4be7-bc58-d78206855fa6}</Project>
+      <Name>open</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -7,9 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using HelloMaze;
-using Plock;
-using PlockForm = Plock.Form1;
+//using HelloMaze;
+//using Plock;
+//using PlockForm = Plock.Form1;
 
 namespace open
 {
@@ -24,6 +24,7 @@ namespace open
         int[,] r;
         int[,] g;
         int[,] b;
+        public bool cFlag = false;
 
         public Open()
         {
@@ -148,8 +149,10 @@ namespace open
             {
                 if (cursoly == 360)
                 {                  
-                    PlockForm gameForm = new PlockForm();
-                    gameForm.Show();
+                    //PlockForm gameForm = new PlockForm();
+                    //gameForm.Show();
+                    cFlag = true;
+                    
                     this.Close();                    
                 }
             }

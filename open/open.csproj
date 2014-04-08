@@ -87,16 +87,6 @@
   <ItemGroup>
     <None Include="Resources\title.bmp" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\HelloMaze\MazeWindow.csproj">
-      <Project>{269d0337-76b4-430e-84ed-39173a3d744b}</Project>
-      <Name>MazeWindow</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\Plock\Plock.csproj">
-      <Project>{65a6bf2e-571e-4be1-babc-514b2f492093}</Project>
-      <Name>Plock</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
