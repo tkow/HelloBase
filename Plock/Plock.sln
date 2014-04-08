@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MazeWindow", "HelloMaze\Maz
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BitmapPaint", "HelloMaze\BitmapPaint\BitmapPaint.csproj", "{3D1040DA-51BF-4986-B0A6-AD5E58261862}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "open", "open\open.csproj", "{F264178B-F392-4BE7-BC58-D78206855FA6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -49,6 +51,16 @@ Global
 		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
 		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{3D1040DA-51BF-4986-B0A6-AD5E58261862}.Release|x86.ActiveCfg = Release|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{F264178B-F392-4BE7-BC58-D78206855FA6}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
