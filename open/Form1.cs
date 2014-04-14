@@ -24,7 +24,6 @@ namespace open
         int[,] r;
         int[,] g;
         int[,] b;
-        public bool cFlag = false;
 
         public Open()
         {
@@ -151,7 +150,7 @@ namespace open
                 {                  
                     //PlockForm gameForm = new PlockForm();
                     //gameForm.Show();
-                    cFlag = true;
+                    //cFlag = true;
                     
                     this.Close();                    
                 }

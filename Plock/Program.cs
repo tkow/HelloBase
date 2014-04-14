@@ -18,12 +18,8 @@ namespace Plock
             Application.SetCompatibleTextRenderingDefault(false);
             Open zady = new Open();
             zady.ShowDialog();
-            bool closeFlag = false;
-            while (!closeFlag)
-            {
-                Application.Run(new Form1());
-                closeFlag = zady.cFlag;
-            }
+            Application.Run(new Form1());
+
         }
     }
 }
