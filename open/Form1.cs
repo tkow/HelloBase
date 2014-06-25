@@ -161,6 +161,10 @@ namespace open
                     cFlag = true;
                     this.Close();
                 }
+                else
+                {
+
+                }
             }
         }
 
