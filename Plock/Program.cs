@@ -21,8 +21,13 @@ namespace Plock
             bool closeFlag = false;
             while (!closeFlag)
             {
-                Application.Run(new Form1());
+                if(zady.eFlag==true)
+                {
+                    Application.Run(new Form1());
+                }
+
                 closeFlag = zady.cFlag;
+
             }
         }
     }

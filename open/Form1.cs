@@ -18,13 +18,13 @@ namespace open
         Bitmap bmp;
         Timer timer = new Timer();
         int count = 0;
-        int cursolx = 273;
-        int cursoly = 360;
-        int dy = 54;
+        int cursoly = 310;
+        int dy = 45;
         int[,] r;
         int[,] g;
         int[,] b;
         public bool cFlag = false;
+        public bool eFlag = false;
 
         public Open()
         {
@@ -109,9 +109,9 @@ namespace open
 
             else if (count > 23)
             {
-                bmp = Properties.Resources.title;
+                bmp = Properties.Resources.title1;
                 Graphics gra = Graphics.FromImage(bmp);
-                gra.FillEllipse(Brushes.White, 273, 360, 10, 10);
+                gra.FillEllipse(Brushes.Black, 320, 310, 10, 10);
                 label1.Text = "";
                 if (count == 24) timer.Stop();
             }
@@ -126,36 +126,47 @@ namespace open
         {
 
             Graphics g = Graphics.FromImage(bmp);
-            if (e.KeyCode == Keys.Down && cursoly==360 && count > 23)
+            if (e.KeyCode == Keys.Down && count > 23 && cursoly<400)
             {
                 // 実行したい処理
                 cursoly += dy;
-                g.FillEllipse(Brushes.Black, 273, cursoly-dy, 10, 10);
-                g.FillEllipse(Brushes.White, 273, cursoly, 10, 10);
+                g.FillEllipse(Brushes.White, 320, cursoly-dy, 10, 10);
+                g.FillEllipse(Brushes.Black, 320, cursoly, 10, 10);
                 g.Dispose();
                 pictureBox1.Image = bmp;
                 pictureBox1.Refresh();
             }
-            else if (e.KeyCode == Keys.Up && cursoly==414 && count > 23)
+            else if (e.KeyCode == Keys.Up && count > 23 && cursoly>320)
             {
                 cursoly -= dy;
-                g.FillEllipse(Brushes.White, 273, cursoly, 10, 10);
-                g.FillEllipse(Brushes.Black, 273, cursoly+dy, 10, 10);
+                g.FillEllipse(Brushes.Black, 320, cursoly, 10, 10);
+                g.FillEllipse(Brushes.White, 320, cursoly+dy, 10, 10);
                 g.Dispose();
                 pictureBox1.Image = bmp;
                 pictureBox1.Refresh();
             }
             else if (e.KeyCode == Keys.Enter && count > 23)
             {
-                if (cursoly == 360)
+                if (cursoly == 310)
                 {                  
                     //PlockForm gameForm = new PlockForm();
                     //gameForm.Show();
                     cFlag = true;
+                    eFlag = true;
                     
                     this.Close();                    
                 }
+                else if (cursoly == 400)
+                {
+                    cFlag = true;
+                    this.Close();
+                }
             }
+        }
+
+        private void Open_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            cFlag = true;
         }
 
     }
