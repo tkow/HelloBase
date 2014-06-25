@@ -23,7 +23,7 @@ namespace Plock
             {
                 if(zady.eFlag==true)
                 {
-                    Application.Run(new Form1());
+                Application.Run(new Form1());
                 }
 
                 closeFlag = zady.cFlag;

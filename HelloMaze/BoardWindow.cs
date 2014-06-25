@@ -171,7 +171,7 @@ namespace HelloMaze
         }
 
 
-        public int CountToObject(BoardObject obj, bool[,] CanPutObject,int directionnum){
+        public int CountToObject(BoardObject obj,int directionnum){
             int checkx = obj.ObjectPositionX;
             int checky = obj.ObjectPositionY;
 
@@ -183,7 +183,7 @@ namespace HelloMaze
 
                     while (checkx == BoardPositionXmax - 1)
                         checkx++;
-                    if (CanPutObject[checkx, checky] == false)
+                    if (BoardObjectCanMove[checkx, checky] == false)
                     {
                         break;
                     }
@@ -193,7 +193,7 @@ namespace HelloMaze
 
                     while (checky == BoardPositionYmax - 1)
                         checky++;
-                    if (CanPutObject[checkx, checky] == false)
+                    if (BoardObjectCanMove[checkx, checky] == false)
                     {
                         break;
                     }
@@ -203,7 +203,7 @@ namespace HelloMaze
 
                     while(checkx==0)
                         checkx --;
-                        if (CanPutObject[checkx, checky] == false)
+                        if (BoardObjectCanMove[checkx, checky] == false)
                         {
                             break;
                         }
@@ -212,7 +212,7 @@ namespace HelloMaze
                 case 4:
                         while (checky == 0)
                             checky--;
-                        if (CanPutObject[checkx, checky] == false)
+                        if (BoardObjectCanMove[checkx, checky] == false)
                         {
                             break;
                         }
