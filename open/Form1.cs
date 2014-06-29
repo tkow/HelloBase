@@ -88,12 +88,12 @@ namespace open
                 {
                     for (int j = 0; j < bmp.Height; j++)
                     {
-                        bmp.SetPixel(i, j, Color.FromArgb(0,0,0));
+                        bmp.SetPixel(i, j, Color.FromArgb(0, 0, 0));
                     }
                 }
                 string[] load;
-                load = new string[6] { "","ロ", "ー", "ド", "中", "…" }; 
-                label1.Text += load[count-17];
+                load = new string[6] { "", "ロ", "ー", "ド", "中", "…" };
+                label1.Text += load[count - 17];
             }
 
             else if (count == 23)
