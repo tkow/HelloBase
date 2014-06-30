@@ -10,6 +10,7 @@ namespace HelloMaze
     /// <summary>
     /// Boardに配置されるオブジェクト操作を行うクラス
     /// </summary>
+    [Serializable]
     public class BoardObject 
     {
         /// <summary>
@@ -54,7 +55,7 @@ namespace HelloMaze
     
 
     }
-
+    [Serializable]
     class PlayerObject : BoardObject
     {
        
@@ -77,6 +78,7 @@ namespace HelloMaze
 
 
     }
+    [Serializable]
     class WallObject :BoardObject
     { 
      public WallObject(int X,int Y)
@@ -86,7 +88,7 @@ namespace HelloMaze
             ObjectSelectNum = 0;
          }
     }
-
+    [Serializable]
     class EnemyObject : BoardObject
     { 
      public EnemyObject(int X,int Y)
@@ -96,7 +98,7 @@ namespace HelloMaze
             ObjectSelectNum = 2;
          }
     }
-
+    [Serializable]
     class ItemObject : BoardObject
     {
         public ItemObject(int X,int Y)
@@ -106,6 +108,7 @@ namespace HelloMaze
             ObjectSelectNum = 3;
         }
         }
+    [Serializable]
     class GoalObject : BoardObject
     { 
     public GoalObject(int X,int Y)
