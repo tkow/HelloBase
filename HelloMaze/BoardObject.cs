@@ -17,10 +17,20 @@ namespace HelloMaze
         /// オブジェクトの横マス座標
         /// </summary>
         internal int ObjectPositionX;
+        public int objectPositionX
+        {
+            get {return ObjectPositionX;}
+            protected set { ObjectPositionX = value; }
+        }
         /// <summary>
         /// オブジェクトの縦マス座標
         /// </summary>
         internal int ObjectPositionY;
+        public int objectPositionY
+        {
+            get {return ObjectPositionY;}
+            protected set { ObjectPositionY=value; }
+        }
          /// <summary>
          /// オブジェクトの種類を識別する番号
          /// <remarks>

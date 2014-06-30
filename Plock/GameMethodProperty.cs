@@ -82,6 +82,10 @@ namespace Plock
             Dictionary<string, IsMethod> methodDictionary = new Dictionary<string, IsMethod>();
 
             methodDictionary.Add("xが2なら", new IsX2());
+            methodDictionary.Add("上に物があるなら", new IsUpObject());
+            methodDictionary.Add("下に物があるなら", new IsDownObject());
+            methodDictionary.Add("右に物があるなら", new IsRightObject());
+            methodDictionary.Add("左に物があるなら", new IsLeftObject());
 
             return methodDictionary;
         }
@@ -92,6 +96,36 @@ namespace Plock
             {
                 //return game.isX2();
                 return true;
+            }
+        }
+
+        public class IsUpObject : IsMethod
+        {
+            public override bool execute(GameData game)
+            {
+                return  -1 == game.CountToObject(game.controlobj.objectPositionX, game.controlobj.objectPositionY, 4);
+            }
+        }
+
+        public class IsDownObject : IsMethod
+        {
+            public override bool execute(GameData game)
+            {
+                return 1 == game.CountToObject(game.controlobj.objectPositionX, game.controlobj.objectPositionY, 2);
+            }
+        }
+        public class IsRightObject : IsMethod
+        {
+            public override bool execute(GameData game)
+            {
+                return 1 == game.CountToObject(game.controlobj.objectPositionX, game.controlobj.objectPositionY, 1);
+            }
+        }
+        public class IsLeftObject : IsMethod
+        {
+            public override bool execute(GameData game)
+            {
+                return -1 == game.CountToObject(game.controlobj.objectPositionX, game.controlobj.objectPositionY, 3);
             }
         }
     }
