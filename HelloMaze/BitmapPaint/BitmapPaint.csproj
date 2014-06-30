@@ -59,6 +59,13 @@
     <Content Include="Monster1.bmp" />
     <Content Include="player1.bmp" />
     <None Include="Resources\goal.bmp" />
+    <None Include="Resources\Tutorial01" />
+    <None Include="Resources\Tutorial02" />
+    <None Include="Resources\Tutorial03" />
+    <None Include="Resources\Tutorial04" />
+    <None Include="Resources\Tutorial_for" />
+    <None Include="Resources\Tutorial_for_if" />
+    <None Include="Resources\Tutorial_if" />
     <None Include="Resources\wall.bmp" />
     <None Include="Resources\items.bmp" />
   </ItemGroup>

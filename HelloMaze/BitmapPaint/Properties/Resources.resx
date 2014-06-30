@@ -130,6 +130,27 @@
   <data name="player1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\player1.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Tutorial01" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial01;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tutorial02" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial02;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tutorial03" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial03;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tutorial04" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial04;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tutorial_for" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_for;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tutorial_for_if" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_for_if;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="Tutorial_if" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Tutorial_if;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="wall" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\wall.bmp;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
