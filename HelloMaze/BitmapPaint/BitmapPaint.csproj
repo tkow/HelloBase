@@ -58,6 +58,9 @@
   <ItemGroup>
     <Content Include="Monster1.bmp" />
     <Content Include="player1.bmp" />
+    <None Include="Resources\goal.bmp" />
+    <None Include="Resources\wall.bmp" />
+    <None Include="Resources\items.bmp" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -65,9 +68,7 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Resources\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

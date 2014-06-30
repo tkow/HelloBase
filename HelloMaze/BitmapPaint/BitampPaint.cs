@@ -74,7 +74,15 @@ namespace BitmapPaint
                 
                 case 0: using (Graphics g = Graphics.FromImage(bmp))
                     {
-                        g.FillRectangle(Brushes.Black, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						//g.FillRectangle(Brushes.Black, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						Bitmap img = Properties.Resources.wall;
+
+						img.MakeTransparent();
+
+
+
+						g.DrawImage(img, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						img.Dispose();
                         g.Dispose();
                                     CanPutObjectOnBoard[PositionX, PositionY] = false;
                     }
@@ -106,13 +114,30 @@ namespace BitmapPaint
                     break;
                 case 3: using (Graphics g = Graphics.FromImage(bmp))
                     {
-                        g.FillEllipse(Brushes.Blue, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						//g.FillEllipse(Brushes.Blue, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+
+						Bitmap img = Properties.Resources.items;
+
+						img.MakeTransparent();
+
+
+
+						g.DrawImage(img, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						img.Dispose();
                         g.Dispose();
                     }
                     break;
                 case 4: using (Graphics g = Graphics.FromImage(bmp))
                     {
-                        g.FillEllipse(Brushes.Blue, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						//g.FillEllipse(Brushes.Blue, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						Bitmap img = Properties.Resources.goal;
+
+						img.MakeTransparent();
+
+
+
+						g.DrawImage(img, PositionX * sqlength, PositionY * sqlength, sqlength, sqlength);
+						img.Dispose();
                         g.Dispose();
                     }
                     break;
