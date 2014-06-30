@@ -540,9 +540,9 @@ namespace HelloMaze
         {
             stateHistory = new Dataset(this);
 
-            System.IO.Directory.CreateDirectory(@"OthelloFiles");
+            System.IO.Directory.CreateDirectory(@"Userdata");
             SaveFileDialog sfd = new SaveFileDialog();
-            sfd.InitialDirectory = Directory.GetCurrentDirectory() + @"\OthelloFiles";
+            sfd.InitialDirectory = Directory.GetCurrentDirectory() + @"\Userdata";
             sfd.FileName = "dat" + DateTime.Now.Year + DateTime.Now.Month + DateTime.Now.Day + "_" + DateTime.Now.Hour + DateTime.Now.Minute + DateTime.Now.Second;
             if (sfd.ShowDialog() == DialogResult.OK)
             {
