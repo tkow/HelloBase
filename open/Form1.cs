@@ -46,6 +46,7 @@ namespace open
 
         public void timer_Tick(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             count =24;
             //if (count == 0)
             //{
@@ -110,6 +111,71 @@ namespace open
             //}
 
             if (count > 23)
+=======
+            if (count == 0)
+            {
+
+                bmp = Properties.Resources.intro;
+                for (int i = 0; i < bmp.Width; i++)
+                {
+                    for (int j = 0; j < bmp.Height; j++)
+                    {
+                        r[i, j] = (bmp.GetPixel(i, j).R);
+                        g[i, j] = (bmp.GetPixel(i, j).G);
+                        b[i, j] = (bmp.GetPixel(i, j).B);
+                    }
+                }
+            }
+
+            if (count <= 8)
+            {
+                for (int i = 0; i < bmp.Width; i++)
+                {
+                    for (int j = 0; j < bmp.Height; j++)
+                    {
+                        bmp.SetPixel(i, j, Color.FromArgb(r[i, j] / 8 * count, g[i, j] / 8 * count, b[i, j] / 8 * count));
+                    }
+                }
+            }
+
+            else if (count > 8 && count <= 16)
+            {
+                for (int i = 0; i < bmp.Width; i++)
+                {
+                    for (int j = 0; j < bmp.Height; j++)
+                    {
+                        bmp.SetPixel(i, j, Color.FromArgb(r[i, j] / 8 * (count - ((count - 8) * 2 - 1)), g[i, j] / 8 * (count - ((count - 8) * 2 - 1)), b[i, j] / 8 * (count - ((count - 8) * 2 - 1))));
+                    }
+                }
+            }
+
+            else if (count > 16 && count <= 22)
+            {
+                for (int i = 0; i < bmp.Width; i++)
+                {
+                    for (int j = 0; j < bmp.Height; j++)
+                    {
+                        bmp.SetPixel(i, j, Color.FromArgb(0, 0, 0));
+                    }
+                }
+                string[] load;
+                load = new string[6] { "", "ロ", "ー", "ド", "中", "…" };
+                label1.Text += load[count - 17];
+            }
+
+            else if (count == 23)
+            {
+                for (int i = 0; i < bmp.Width; i++)
+                {
+                    for (int j = 0; j < bmp.Height; j++)
+                    {
+                        bmp.SetPixel(i, j, Color.FromArgb(0, 0, 0));
+                    }
+                }
+            }
+
+            else if (count > 23)
+>>>>>>> origin/master
             {
                 bmp = Properties.Resources.title1;
                 Graphics gra = Graphics.FromImage(bmp);
