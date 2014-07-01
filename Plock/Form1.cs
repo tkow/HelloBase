@@ -10,12 +10,12 @@ using System.Windows.Forms;
 namespace Plock
 {
     using GameForm = HelloMaze.BoardData;//TODO:利用したいゲームのFormを登録
+    using System.Threading;
 
     public partial class Form1 : Form
     {
         GameForm gameForm;
 
-        //MethodsAlgorism.MethodsAlgorism gameController;
         GameInterpriter gameInterpriter;
 
         public Form1()
@@ -27,7 +27,6 @@ namespace Plock
             gameForm.Show();
 
             //インタプリタの実体を生成
-            //gameController = new MethodsAlgorism.MethodsAlgorism();
             gameInterpriter = new GameInterpriter();
         }
 
@@ -39,8 +38,11 @@ namespace Plock
         private void button1_Click(object sender, EventArgs e)
         {
             //ゲームのデータクラスの更新
-            //gameForm.game = gameController.run(textBox1.Text, gameForm.game);
-            gameForm=gameInterpriter.run(textBox1.Text, gameForm);
+            //gameForm=gameInterpriter.run(textBox1.Text, gameForm);
+
+            Thread thread = new Thread(new ThreadStart(() => {gameInterpriter.run(textBox1.Text, gameForm);}));
+            thread.Start();
+
             //表示の更新(refreshObjectは未完成のメソッド)
             //gameForm.refreshObject(gameForm.controlobj);
         }

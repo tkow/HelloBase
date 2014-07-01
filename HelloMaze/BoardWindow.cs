@@ -55,6 +55,7 @@ namespace HelloMaze
         private List<BoardObject> _ListObjectBoard=new List<BoardObject>(); 
         public BitmapPaintClass bmppaint = new BitmapPaintClass(squarelength);
         Bitmap back;
+        delegate void RefreshPictureBox1();
         public Bitmap fore;
         Point sp;    //イベント発生時に保持されるマウスの画面座標
 
@@ -307,7 +308,8 @@ namespace HelloMaze
                         {
                             bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 1, i);
                             fore.MakeTransparent(Color.White);
-                            pictureBox1.Refresh();
+                            //pictureBox1.Refresh();
+                            refreshPictureBox1();
                             System.Threading.Thread.Sleep(1);
 
                         }
@@ -323,7 +325,8 @@ namespace HelloMaze
                         {
                             bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 2, i);
                             fore.MakeTransparent(Color.White);
-                            pictureBox1.Refresh();
+                            //pictureBox1.Refresh();
+                            refreshPictureBox1();
                             System.Threading.Thread.Sleep(1);
 
                         }
@@ -340,7 +343,8 @@ namespace HelloMaze
                         {
                             bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 3, i);
                             fore.MakeTransparent(Color.White);
-                            pictureBox1.Refresh();
+                            //pictureBox1.Refresh();
+                            refreshPictureBox1();
                             System.Threading.Thread.Sleep(1);
 
                         }
@@ -356,7 +360,8 @@ namespace HelloMaze
                         {
                             bmppaint.ObjectMovePaint(obj.ObjectPositionX, obj.ObjectPositionY, fore, obj.ObjectSelectNum, ref CanPutObjectOnBoard, 4, i);
                             fore.MakeTransparent(Color.White);
-                            pictureBox1.Refresh();
+                            //pictureBox1.Refresh();
+                            refreshPictureBox1();
                             System.Threading.Thread.Sleep(1);
                         }
                         obj.moveDown();
@@ -365,6 +370,19 @@ namespace HelloMaze
                         break;
         }
        }
+
+        /// <summary>
+        /// スレッドセーフなPictureBox1.Refresh()
+        /// </summary>
+        private void refreshPictureBox1()
+        {
+            if (this.pictureBox1.InvokeRequired)
+            {
+                 RefreshPictureBox1 refreshPic1=new RefreshPictureBox1(() => pictureBox1.Refresh());
+                 this.Invoke(refreshPic1);
+            }
+            else{ this.pictureBox1.Refresh();}
+        }
 
         /// <summary>
         /// 統一的に使える画面更新のメソッドを作る必要がある(未完成)
