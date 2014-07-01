@@ -44,7 +44,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(136, 258);
             this.textBox1.TabIndex = 0;
-            this.textBox1.Text = "左へ動く\r\nもし左に物があるなら{\r\n  上へ動く\r\n  もし上に物があるなら{\r\n    右へ動く\r\n    右へ動く\r\n    もし右に物があるなら{\r\n      下へ動く\r\n      下へ動く\r\n    }\r\n  }\r\n}";
+            this.textBox1.Text = "左へ動く\r\n左に物があるなら繰り返す{\r\n  もし上に物があるなら{\r\n    右へ動く\r\n  }\r\n  上へ動く\r\n}\r\n";
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2

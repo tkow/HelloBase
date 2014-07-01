@@ -79,7 +79,7 @@ namespace Plock
         {
             if (value.isControlMethod()) return getCodeList(value.getMoveTo(game));//制御文の時は要検討（制御文による）
             if(nextCode!=null)return nextCode;//次のコードがあるときは次のコード
-            return collerCode.nextCode;//次のコードがない時は要検討（コードによる）
+            return getCodeList(value.getMoveTo(game));//次のコードがない時は要検討（コードによる）
         }
 
         /// <summary>
@@ -94,9 +94,11 @@ namespace Plock
                 case MoveTo.NEXT:
                     return nextCode;
                 case MoveTo.COLLERNEXT:
-                    return collerCode;
+                    return collerCode.nextCode;
                 case MoveTo.COLLEE:
                     return colleeCode;
+                case MoveTo.COLLER:
+                    return collerCode;
             }
             return null;
         }
@@ -121,7 +123,10 @@ namespace Plock
             if (codeQueue.Count == 0) return;
 
             _value = codeQueue.Dequeue();
-            value.set(_value);
+
+            if ( _value.Contains("}") && collerCode.value.isWhileMethod()) 
+                value.setReturnMethod();//While文の終わりの}は特殊（呼び出し元のisMethodで次に実行するコードが変わる）なので場合分け
+            else value.set(_value);
 
             if (_value.Contains("{"))
             {

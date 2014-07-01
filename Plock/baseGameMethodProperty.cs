@@ -11,18 +11,30 @@ namespace Plock
     public class MethodWrapper
     {
         Method method;//execute(ゲームの更新用)
-        IsMethod isMethod;//getMoveTo(次のcurrentCodeの場所の取得用)
         public MethodWrapper()
         {
             method = null;
-            isMethod = null;
         }
 
+        /// <summary>
+        /// methodをStringで設定する
+        /// </summary>
+        /// <param name="code"></param>
         public void set(String code)
         {
-            method = GameMethodProperty.getDoMethodDictionary().Single(_method => code.Contains(_method.Key)).Value;
-            method.set(code);
+            method = GameMethodProperty.getDoMethodDictionary().Single(_method => code.Contains(_method.Key)).Value;//methodをセットする
+            method.set(code);//制御文のisMethodをセットする
         }
+
+        /// <summary>
+        /// ReturnMethodを直接指定して設定する
+        /// </summary>
+        /// <param name="code"></param>
+        public void setReturnMethod()
+        {
+            method = new baseGameMethodProperty.ReturnMethod();
+        }
+
         public GameData execute(GameData game)
         {
             return method.execute(game);
@@ -41,6 +53,11 @@ namespace Plock
         public bool isControlMethod()
         {
             return method is ControlMethod;
+        }
+
+        public bool isWhileMethod()
+        {
+            return method is baseGameMethodProperty.WhileMethod;
         }
     }
 
@@ -95,6 +112,7 @@ namespace Plock
         {
             Dictionary<string, Method> methodDictionary = new Dictionary<string, Method>();
             methodDictionary.Add("もし", new IfMethod());
+            methodDictionary.Add("繰り返す", new WhileMethod());
             methodDictionary.Add("}", new EmptyMethod());
             return methodDictionary;
         }
@@ -109,17 +127,42 @@ namespace Plock
             }
         }
 
-        //何もしないメソッド。　例えば、中かっこの終わり｝とか。表示上は残しておいた方が見やすいが、何もしない行用。
+        public class WhileMethod : ControlMethod
+        {
+            public override MoveTo getMoveTo(GameData game)
+            {
+                if (isMethod.execute(game)) return MoveTo.COLLEE;
+                return MoveTo.NEXT;
+            }
+        }
+
+        //何もしないメソッド。　例えば、While分の中かっこの終わり｝とか。次のcurrentCodeの場所が呼び出し元コードになることに注意。
+        public class ReturnMethod : Method
+        {
+            public override GameData execute(GameData game)
+            {
+                return game;
+            }
+            public override MoveTo getMoveTo(GameData game)
+            {
+                return MoveTo.COLLER;
+            }
+        }
+        //何もしないメソッド。　例えば、if文の中かっこの終わり｝とか。表示上は残しておいた方が見やすいが、何もしない行用。
         public class EmptyMethod : Method
         {
             public override GameData execute(GameData game)
             {
                 return game;
             }
+            public override MoveTo getMoveTo(GameData game)
+            {
+                return MoveTo.COLLERNEXT;
+            }
         }
     }
     public enum MoveTo
     {
-        NEXT, COLLERNEXT, COLLEE
+        NEXT, COLLERNEXT, COLLEE ,COLLER
     }
 }
