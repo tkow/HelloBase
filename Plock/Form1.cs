@@ -18,10 +18,12 @@ namespace Plock
 
         GameInterpriter gameInterpriter;
 
+        Thread forRunAll;
+
         public Form1()
         {
             InitializeComponent();
-            
+
             //ゲームのFormのインスタンスを生成
             gameForm = new GameForm();
             gameForm.Show();
@@ -37,11 +39,19 @@ namespace Plock
 
         private void button1_Click(object sender, EventArgs e)
         {
+            //ゲームの実行
+            if (forRunAll != null && forRunAll.IsAlive)
+            {
+                //無視する
+            }
+            else
+            {
+                forRunAll = new Thread(new ThreadStart(() => { gameInterpriter.run(textBox1.Text, gameForm); }));
+                forRunAll.Start();//開始する
+            }
+
             //ゲームのデータクラスの更新
             //gameForm=gameInterpriter.run(textBox1.Text, gameForm);
-
-            Thread thread = new Thread(new ThreadStart(() => {gameInterpriter.run(textBox1.Text, gameForm);}));
-            thread.Start();
 
             //表示の更新(refreshObjectは未完成のメソッド)
             //gameForm.refreshObject(gameForm.controlobj);
