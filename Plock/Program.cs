@@ -16,19 +16,9 @@ namespace Plock
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Open zady = new Open();
+            Open zady = new Open();//オープニング画面
             zady.ShowDialog();
-            bool closeFlag = false;
-            while (!closeFlag)
-            {
-                if(zady.eFlag==true)
-                {
-                Application.Run(new Form1());
-                }
-
-                closeFlag = zady.cFlag;
-
-            }
+            if (zady.eFlag == true)Application.Run(new Form1());
         }
     }
 }
