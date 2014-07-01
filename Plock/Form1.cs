@@ -39,7 +39,7 @@ namespace Plock
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //ゲームの実行
+            //ゲームのデータクラスの更新
             if (forRunAll != null && forRunAll.IsAlive)
             {
                 //無視する
