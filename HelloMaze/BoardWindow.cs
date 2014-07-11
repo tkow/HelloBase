@@ -85,7 +85,6 @@ namespace HelloMaze
                set { _ListObjectBoard = value; }
            }
 
-
         #endregion
              
         public BoardData() //コンストラクタ
@@ -94,8 +93,7 @@ namespace HelloMaze
          InitializeComponent();
             back = new Bitmap(pictureBox1.Width, pictureBox1.Height);
             fore = new Bitmap(pictureBox1.Width, pictureBox1.Height);
-
-            this.KeyPreview=true;
+        
 
             this.pictureBox1.BackgroundImage = back;
             this.pictureBox1.Image = fore;
@@ -174,12 +172,11 @@ namespace HelloMaze
             System.Drawing.Point cp = pictureBox1.PointToClient(sp);
 
             GetCursolPosition(cp.X, cp.Y,ref x,ref y);
-            //オブジェクトまでのマスカウントの動作確認
-            //for (int i = 1; i < 5; i++)
-            //{
-            //    int a = CountToObject(x, y, i);
-            //    checkman.Add(a);
-            //}   
+            for (int i = 1; i < 5; i++)
+            {
+                int a = CountToObject(x, y, i);
+                checkman.Add(a);
+            }   
             squareX.Text = "squareX:" + x;
            squareY.Text = "squareY:" + y;
            
@@ -281,22 +278,20 @@ namespace HelloMaze
 
         private void BoardData_KeyDown(object sender, KeyEventArgs e) //十字キー入力後オブジェクトを移動するメソッド
         {
-           //his.pictureBox1.Focus();
-
-            if (e.KeyCode == Keys.X) //right
+            if (e.KeyCode == Keys.Right)
             {
                 MoveOperation(controlobj, 2, 1);
             }
-            if (e.KeyCode == Keys.A)  //left
+            if (e.KeyCode == Keys.Left)
             {
 
                 MoveOperation(controlobj, 3, 1);
             }
-            if (e.KeyCode == Keys.S) //UP
+            if (e.KeyCode == Keys.Up)
             {
                 MoveOperation(controlobj, 1, 1);
             }
-            if (e.KeyCode == Keys.Z) //Down
+            if (e.KeyCode == Keys.Down)
             {
                 MoveOperation(controlobj, 4, 1);
             }

@@ -140,19 +140,16 @@
             // 
             // save_button
             // 
-            this.save_button.CausesValidation = false;
             this.save_button.Location = new System.Drawing.Point(385, 457);
             this.save_button.Name = "save_button";
             this.save_button.Size = new System.Drawing.Size(156, 45);
             this.save_button.TabIndex = 3;
             this.save_button.Text = "save";
-            this.save_button.UseCompatibleTextRendering = true;
             this.save_button.UseVisualStyleBackColor = true;
             this.save_button.Click += new System.EventHandler(this.save_button_Click);
             // 
             // load_button
             // 
-            this.load_button.CausesValidation = false;
             this.load_button.Location = new System.Drawing.Point(385, 530);
             this.load_button.Name = "load_button";
             this.load_button.Size = new System.Drawing.Size(156, 45);
